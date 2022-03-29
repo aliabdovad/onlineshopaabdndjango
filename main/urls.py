@@ -6,8 +6,10 @@ from django.urls import path
 from django.urls import path
 from django.conf import settings
 
-urlpatterns = [
+from main import views
 
+urlpatterns = [
+    path('', views.home, name='home')
 ]
 
 
