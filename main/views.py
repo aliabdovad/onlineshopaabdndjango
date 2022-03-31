@@ -1,6 +1,9 @@
 from django.shortcuts import render
 
-
 # Create your views here.
+from main.models import Customer
+
+
 def home(request):
-    return render(request, 'main/index.html')
+    customers = Customer.objects.all()
+    return render(request, 'main/index.html', {'customers': customers})
